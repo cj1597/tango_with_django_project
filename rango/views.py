@@ -243,7 +243,7 @@ class ListProfilesView(View):
         context_dict = {}
         profile = UserProfile.objects.all()
         context_dict['userprofile_list'] = profile
-        # context_dict['userprofile_pictures'] = profile.picture
+        context_dict['pictures'] = profile
         return render(request, 'rango/list_profiles.html', context_dict)
 
         
